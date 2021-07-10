@@ -6,7 +6,7 @@
 #    By: ewatanab <ewatanab@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/07 14:55:05 by ewatanab          #+#    #+#              #
-#    Updated: 2021/07/08 16:54:08 by ewatanab         ###   ########.fr        #
+#    Updated: 2021/07/10 14:07:56 by ewatanab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,13 @@ SRCNAMES = \
 SRCS = $(addprefix $(SRCDIR), $(SRCNAMES))
 OBJDIR = ./obj/
 OBJS = $(SRCNAMES:%.c=$(OBJDIR)%.o)
+INCLUDEDIR = ./include/
 
 #LIBFTDIR = ./libft/
 #LIBFT = libft.a
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra # -g -O0
+CFLAGS = -Wall -Werror -Wextra -I $(INCLUDEDIR) # -g -O0
 
 all : $(OBJDIR) $(NAME)
 
